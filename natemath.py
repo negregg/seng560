@@ -57,83 +57,83 @@ def expValue(value1, value2):
 # Returns octal value as int
 def oct2Int(value):
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type integer or float')
+        raise Exception('value should must be of type octal')
     result = int(value)
     return result
 
 # Returns hexadecimal as int
 def hex2Int(value):
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type integer or float')
+        raise Exception('value should must be of type hex')
     result = int(value)
     return result
 
 # Returns binary as int
 def bin2Int(value):
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type integer or float')
+        raise Exception('value should must be of type binary')
     result = int(value)
     return result
 
 # Returns hex as oct
 def hex2Oct(value):
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type integer or float')
+        raise Exception('value should must be of type hexadeciman')
     result = oct(value)
     return result
 
 # Returns int as oct
 def int2Oct(value):
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type integer or float')
+        raise Exception('value should must be of type integer')
     result = oct(value)
     return result
 
 # Returns bin as oct
 def bin2Oct(value):
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type integer or float')
+        raise Exception('value should must be of type binary')
     result = oct(value)
     return result
 
 # Returns oct as hex
 def oct2Hex(value):
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type integer or float')
+        raise Exception('value should must be of type octal')
     result = hex(value)
     return result
 
 # Returns int as hex
 def int2Hex(value):
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type integer or float')
+        raise Exception('value should must be of type integer')
     result = hex(value)
     return result
 
 # Returns bin as hex
 def bin2Hex(value):
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type integer or float')
+        raise Exception('value should must be of type binary')
     result = hex(value)
     return result
 
 # Returns oct as bin
 def oct2Bin(value):
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type integer or float')
+        raise Exception('value should must be of type octal')
     result = bin(value)
     return result
 
 # Returns int as bin
 def int2Bin(value):
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type integer or float')
+        raise Exception('value should must be of type integer')
     result = bin(value)
     return result
 
 # Returns hex as bin
 def hex2Bin(value):
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type integer or float')
+        raise Exception('value should must be of type hexadecimal')
     result = bin(value)
     return result
