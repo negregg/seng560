@@ -21,9 +21,9 @@ def addValue(value1, value2):
    """
 
     if isinstance(value1, (str, complex, bool)):
-        raise Exception('value1 should must be of type integer or float')
+        raise Exception('value1 must be of type integer or float')
     if isinstance(value2, (str, complex, bool)):
-        raise Exception('value2 should must be of type integer or float.')
+        raise Exception('value2 must be of type integer or float.')
     result = value1 + value2
     return result
 
@@ -42,9 +42,9 @@ def subValue(value1, value2):
    """
 
     if isinstance(value1, (str, complex, bool)):
-        raise Exception('value1 should must be of type integer or float')
+        raise Exception('value1 must be of type integer or float')
     if isinstance(value2, (str, complex, bool)):
-        raise Exception('value2 should must be of type integer or float.')
+        raise Exception('value2 must be of type integer or float.')
     result = value1 - value2
     return result
 
@@ -63,9 +63,9 @@ def multiValue(value1, value2):
    """
 
     if isinstance(value1, (str, complex, bool)):
-        raise Exception('value1 should must be of type integer or float')
+        raise Exception('value1 must be of type integer or float')
     if isinstance(value2, (str, complex, bool)):
-        raise Exception('value2 should must be of type integer or float.')
+        raise Exception('value2 must be of type integer or float.')
     result = value1 * value2
     return result
 
@@ -84,9 +84,9 @@ def divValue(value1, value2):
    """
 
     if isinstance(value1, (str, complex, bool)):
-        raise Exception('value1 should must be of type integer or float')
+        raise Exception('value1 must be of type integer or float')
     if isinstance(value2, (str, complex, bool)):
-        raise Exception('value2 should must be of type integer or float.')
+        raise Exception('value2 must be of type integer or float.')
     result = value1 / value2
     return result
 
@@ -104,17 +104,18 @@ def sqrtValue(value):
    """
 
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type integer or float')
-    math.sqrt(value);
+        raise Exception('value must be of type integer or float')
+    result = math.sqrt(value);
     return result
 
 # Find exponent value ( i.e. value1^(value2))
-def expValue(value):
+def expValue(value1, value2):
 
     """Finds exponent of value
 
     Parameters:
-    value (int/float): Value input
+    value1 (int/float): Value 1 input
+    value2 (int/float): Value 2 input
 
     Returns:
     int/float:Returning value as int or float depending on input
@@ -122,10 +123,10 @@ def expValue(value):
    """
 
     if isinstance(value1, (str, complex, bool)):
-        raise Exception('value1 should must be of type integer or float')
+        raise Exception('value1 must be of type integer or float')
     if isinstance(value2, (str, complex, bool)):
-        raise Exception('value2 should must be of type integer or float.')
-    result = value1 + value2
+        raise Exception('value2 must be of type integer or float.')
+    result = value1 ** value2
     return result
 
 # Returns octal value as int
@@ -137,12 +138,12 @@ def oct2Int(value):
     value (int): Value input as octal
 
     Returns:
-    int: Returns value as integer
+    str: Returns value as integer
 
    """
 
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type octal')
+        raise Exception('value must be of type octal')
     result = int(value)
     return result
 
@@ -155,12 +156,12 @@ def hex2Int(value):
     value (int): Value input as hexadecimal
 
     Returns:
-    int: Returns value as integer
+    str: Returns value as integer
 
    """
 
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type hex')
+        raise Exception('value must be of type hex')
     result = int(value)
     return result
 
@@ -173,12 +174,12 @@ def bin2Int(value):
     value (int): Value input as binary
 
     Returns:
-    int: Returns value as integer
+    str: Returns value as integer
 
    """
 
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type binary')
+        raise Exception('value must be of type binary')
     result = int(value)
     return result
 
@@ -191,12 +192,12 @@ def hex2Oct(value):
     value (int): Value input as hexadecimal
 
     Returns:
-    int: Returns value as octal
+    str: Returns value as octal
 
    """
 
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type hexadeciman')
+        raise Exception('value must be of type hexadeciman')
     result = oct(value)
     return result
 
@@ -209,12 +210,12 @@ def int2Oct(value):
     value (int): Value input as integer
 
     Returns:
-    int: Returns value as octal
+    str: Returns value as octal
 
    """
 
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type integer')
+        raise Exception('value must be of type integer')
     result = oct(value)
     return result
 
@@ -227,12 +228,12 @@ def bin2Oct(value):
     value (int): Value input as binary
 
     Returns:
-    int: Returns value as octal
+    str: Returns value as octal
 
    """
 
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type binary')
+        raise Exception('value must be of type binary')
     result = oct(value)
     return result
 
@@ -245,12 +246,12 @@ def oct2Hex(value):
     value (int): Value input as octal
 
     Returns:
-    int: Returns value as hexidecimal
+    str: Returns value as hexidecimal
 
    """
 
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type octal')
+        raise Exception('value must be of type octal')
     result = hex(value)
     return result
 
@@ -263,12 +264,12 @@ def int2Hex(value):
     value (int): Value input as integer
 
     Returns:
-    int: Returns value as hexadecimal
+    str: Returns value as hexadecimal
 
    """
 
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type integer')
+        raise Exception('value must be of type integer')
     result = hex(value)
     return result
 
@@ -281,12 +282,12 @@ def bin2Hex(value):
     value (int): Value input as binary
 
     Returns:
-    int: Returns value as hexadecimal
+    str: Returns value as hexadecimal
 
    """
 
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type binary')
+        raise Exception('value must be of type binary')
     result = hex(value)
     return result
 
@@ -299,12 +300,12 @@ def oct2Bin(value):
     value (int): Value input as octal
 
     Returns:
-    int: Returns value as binary
+    str: Returns value as binary
 
    """
 
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type octal')
+        raise Exception('value must be of type octal')
     result = bin(value)
     return result
 
@@ -317,12 +318,12 @@ def int2Bin(value):
     value (int): Value input as binary
 
     Returns:
-    int: Returns value as binary
+    str: Returns value as binary
 
    """
 
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type integer')
+        raise Exception('value must be of type integer')
     result = bin(value)
     return result
 
@@ -335,11 +336,11 @@ def hex2Bin(value):
     value (int): Value input as hexadecimal
 
     Returns:
-    int: Returns value as binary
+    str: Returns value as binary
 
    """
 
     if isinstance(value, (str, complex, bool)):
-        raise Exception('value should must be of type hexadecimal')
+        raise Exception('value must be of type hexadecimal')
     result = bin(value)
     return result
