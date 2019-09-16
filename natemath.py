@@ -1,8 +1,16 @@
 #!/usr/bin/python3
 
-"""Testing module documentation"""
+# Title: Nate's Basic Math Module
+# Author: Nathan Gregg
+# Date: 2019.09.24
 
 
+"""Basic Math Module written in Python3.  This module performs basic math 
+operations.  Operations include addition, subsctraction, etc. but also numerical
+base translations (i.e. binary to octal).
+
+
+"""
 
 import math
 
