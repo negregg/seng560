@@ -4,7 +4,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 
     <title>natemath API documentation</title>
-    <meta name="description" content="" />
+    <meta name="description" content="Basic Math Module written in Python3.  This module performs basic math 
+operations.  Operations incl..." />
 
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
   
@@ -1079,148 +1080,364 @@ table {
 
   <header id="section-intro">
   <h1 class="title"><span class="name">natemath</span> module</h1>
-  
+  <p>Basic Math Module written in Python3.  This module performs basic math 
+operations.  Operations include addition, subsctraction, etc. but also numerical
+base translations (i.e. binary to octal).</p>
   
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath', this);">Show source &equiv;</a></p>
   <div id="source-natemath" class="source">
     <div class="codehilite"><pre><span></span><span class="ch">#!/usr/bin/python3</span>
 
+<span class="c1"># Title: Nate&#39;s Basic Math Module</span>
+<span class="c1"># Author: Nathan Gregg</span>
+<span class="c1"># Date: 2019.09.24</span>
+
+
+<span class="sd">&quot;&quot;&quot;Basic Math Module written in Python3.  This module performs basic math </span>
+<span class="sd">operations.  Operations include addition, subsctraction, etc. but also numerical</span>
+<span class="sd">base translations (i.e. binary to octal).</span>
+
+
+<span class="sd">&quot;&quot;&quot;</span>
+
 <span class="kn">import</span> <span class="nn">math</span>
 
 <span class="c1"># Adds two values and returns a result</span>
 <span class="k">def</span> <span class="nf">addValue</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Adds two values </span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value1 (int/float): Value 1 input</span>
+<span class="sd">    value2 (int/float): Value 2 input</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    int/float:Returning value as int or float depending on input</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value1 should must be of type integer or float&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value1 must be of type integer or float&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 should must be of type integer or float.&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 must be of type integer or float.&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">+</span> <span class="n">value2</span>
     <span class="k">return</span> <span class="n">result</span>
 
 <span class="c1"># Substracts two values and returns a result</span>
 <span class="k">def</span> <span class="nf">subValue</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Substracts two values </span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value1 (int/float): Value 1 input</span>
+<span class="sd">    value2 (int/float): Value 2 input</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    int/float:Returning value as int or float depending on input</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value1 should must be of type integer or float&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value1 must be of type integer or float&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 should must be of type integer or float.&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 must be of type integer or float.&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">-</span> <span class="n">value2</span>
     <span class="k">return</span> <span class="n">result</span>
 
 <span class="c1"># Multiplies two values and returns a result</span>
 <span class="k">def</span> <span class="nf">multiValue</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Multiplies two values </span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value1 (int/float): Value 1 input</span>
+<span class="sd">    value2 (int/float): Value 2 input</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    int/float:Returning value as int or float depending on input</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value1 should must be of type integer or float&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value1 must be of type integer or float&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 should must be of type integer or float.&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 must be of type integer or float.&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">*</span> <span class="n">value2</span>
     <span class="k">return</span> <span class="n">result</span>
 
 <span class="c1"># Divides value 1 by value 2 and returns the result</span>
 <span class="k">def</span> <span class="nf">divValue</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Divides value1 by value2</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value1 (int/float): Value 1 input</span>
+<span class="sd">    value2 (int/float): Value 2 input</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    int/float:Returning value as int or float depending on input</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value1 should must be of type integer or float&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value1 must be of type integer or float&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 should must be of type integer or float.&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 must be of type integer or float.&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">/</span> <span class="n">value2</span>
     <span class="k">return</span> <span class="n">result</span>
 
 <span class="c1"># Finds square root of a value</span>
 <span class="k">def</span> <span class="nf">sqrtValue</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns the square root of a value.&quot;&quot;&quot;</span>
+
+    <span class="sd">&quot;&quot;&quot;Finds square root of value</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int/float): Value input</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    int/float:Returning value as int or float depending on input.</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type integer or float&#39;</span><span class="p">)</span>
-    <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type integer or float&#39;</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
     <span class="k">return</span> <span class="n">result</span>
 
 <span class="c1"># Find exponent value ( i.e. value1^(value2))</span>
 <span class="k">def</span> <span class="nf">expValue</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Finds exponent of value</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value1 (int/float): Value 1 input</span>
+<span class="sd">    value2 (int/float): Value 2 input</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    int/float:Returning value as int or float depending on input</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value1 should must be of type integer or float&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value1 must be of type integer or float&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 should must be of type integer or float.&#39;</span><span class="p">)</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">+</span> <span class="n">value2</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 must be of type integer or float.&#39;</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">**</span> <span class="n">value2</span>
     <span class="k">return</span> <span class="n">result</span>
 
 <span class="c1"># Returns octal value as int</span>
 <span class="k">def</span> <span class="nf">oct2Int</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts octal value to integer</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as octal</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as integer</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type octal&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type octal&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 
 <span class="c1"># Returns hexadecimal as int</span>
 <span class="k">def</span> <span class="nf">hex2Int</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts hexadecimal value to integer</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as hexadecimal</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as integer</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type hex&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type hex&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 
 <span class="c1"># Returns binary as int</span>
 <span class="k">def</span> <span class="nf">bin2Int</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts binary value to integer</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as binary</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as integer</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type binary&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type binary&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 
 <span class="c1"># Returns hex as oct</span>
 <span class="k">def</span> <span class="nf">hex2Oct</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts hexadecimal value to octal</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as hexadecimal</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as octal</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type hexadeciman&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type hexadeciman&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">oct</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 
 <span class="c1"># Returns int as oct</span>
 <span class="k">def</span> <span class="nf">int2Oct</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts integer value to octal</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as integer</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as octal</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type integer&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type integer&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">oct</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 
 <span class="c1"># Returns bin as oct</span>
 <span class="k">def</span> <span class="nf">bin2Oct</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts binary value to octal</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as binary</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as octal</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type binary&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type binary&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">oct</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 
 <span class="c1"># Returns oct as hex</span>
 <span class="k">def</span> <span class="nf">oct2Hex</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts octal value to hexadecimal</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as octal</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as hexidecimal</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type octal&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type octal&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">hex</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 
 <span class="c1"># Returns int as hex</span>
 <span class="k">def</span> <span class="nf">int2Hex</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts integer value to hexadecimal</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as integer</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as hexadecimal</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type integer&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type integer&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">hex</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 
 <span class="c1"># Returns bin as hex</span>
 <span class="k">def</span> <span class="nf">bin2Hex</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts binary value to hexadecimal</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as binary</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as hexadecimal</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type binary&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type binary&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">hex</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 
 <span class="c1"># Returns oct as bin</span>
 <span class="k">def</span> <span class="nf">oct2Bin</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts octal value to binary</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as octal</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as binary</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type octal&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type octal&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 
 <span class="c1"># Returns int as bin</span>
 <span class="k">def</span> <span class="nf">int2Bin</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts integer value to binary</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as binary</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as binary</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type integer&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type integer&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 
 <span class="c1"># Returns hex as bin</span>
 <span class="k">def</span> <span class="nf">hex2Bin</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts hexadecimal value to binary</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as hexadecimal</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as binary</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type hexadecimal&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type hexadecimal&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
@@ -1241,14 +1458,32 @@ table {
 
     
   
+    <div class="desc"><p>Adds two values </p>
+<p>Parameters:
+value1 (int/float): Value 1 input
+value2 (int/float): Value 2 input</p>
+<p>Returns:
+int/float:Returning value as int or float depending on input</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.addValue', this);">Show source &equiv;</a></p>
   <div id="source-natemath.addValue" class="source">
     <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">addValue</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Adds two values </span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value1 (int/float): Value 1 input</span>
+<span class="sd">    value2 (int/float): Value 2 input</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    int/float:Returning value as int or float depending on input</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value1 should must be of type integer or float&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value1 must be of type integer or float&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 should must be of type integer or float.&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 must be of type integer or float.&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">+</span> <span class="n">value2</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
@@ -1267,12 +1502,28 @@ table {
 
     
   
+    <div class="desc"><p>Converts binary value to hexadecimal</p>
+<p>Parameters:
+value (int): Value input as binary</p>
+<p>Returns:
+str: Returns value as hexadecimal</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.bin2Hex', this);">Show source &equiv;</a></p>
   <div id="source-natemath.bin2Hex" class="source">
     <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">bin2Hex</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts binary value to hexadecimal</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as binary</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as hexadecimal</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type binary&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type binary&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">hex</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
@@ -1291,12 +1542,28 @@ table {
 
     
   
+    <div class="desc"><p>Converts binary value to integer</p>
+<p>Parameters:
+value (int): Value input as binary</p>
+<p>Returns:
+str: Returns value as integer</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.bin2Int', this);">Show source &equiv;</a></p>
   <div id="source-natemath.bin2Int" class="source">
     <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">bin2Int</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts binary value to integer</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as binary</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as integer</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type binary&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type binary&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
@@ -1315,12 +1582,28 @@ table {
 
     
   
+    <div class="desc"><p>Converts binary value to octal</p>
+<p>Parameters:
+value (int): Value input as binary</p>
+<p>Returns:
+str: Returns value as octal</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.bin2Oct', this);">Show source &equiv;</a></p>
   <div id="source-natemath.bin2Oct" class="source">
     <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">bin2Oct</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts binary value to octal</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as binary</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as octal</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type binary&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type binary&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">oct</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
@@ -1339,14 +1622,32 @@ table {
 
     
   
+    <div class="desc"><p>Divides value1 by value2</p>
+<p>Parameters:
+value1 (int/float): Value 1 input
+value2 (int/float): Value 2 input</p>
+<p>Returns:
+int/float:Returning value as int or float depending on input</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.divValue', this);">Show source &equiv;</a></p>
   <div id="source-natemath.divValue" class="source">
     <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">divValue</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Divides value1 by value2</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value1 (int/float): Value 1 input</span>
+<span class="sd">    value2 (int/float): Value 2 input</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    int/float:Returning value as int or float depending on input</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value1 should must be of type integer or float&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value1 must be of type integer or float&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 should must be of type integer or float.&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 must be of type integer or float.&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">/</span> <span class="n">value2</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
@@ -1365,15 +1666,33 @@ table {
 
     
   
+    <div class="desc"><p>Finds exponent of value</p>
+<p>Parameters:
+value1 (int/float): Value 1 input
+value2 (int/float): Value 2 input</p>
+<p>Returns:
+int/float:Returning value as int or float depending on input</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.expValue', this);">Show source &equiv;</a></p>
   <div id="source-natemath.expValue" class="source">
     <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">expValue</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Finds exponent of value</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value1 (int/float): Value 1 input</span>
+<span class="sd">    value2 (int/float): Value 2 input</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    int/float:Returning value as int or float depending on input</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value1 should must be of type integer or float&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value1 must be of type integer or float&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 should must be of type integer or float.&#39;</span><span class="p">)</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">+</span> <span class="n">value2</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 must be of type integer or float.&#39;</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">**</span> <span class="n">value2</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
 
@@ -1391,12 +1710,28 @@ table {
 
     
   
+    <div class="desc"><p>Converts hexadecimal value to binary</p>
+<p>Parameters:
+value (int): Value input as hexadecimal</p>
+<p>Returns:
+str: Returns value as binary</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.hex2Bin', this);">Show source &equiv;</a></p>
   <div id="source-natemath.hex2Bin" class="source">
     <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">hex2Bin</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts hexadecimal value to binary</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as hexadecimal</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as binary</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type hexadecimal&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type hexadecimal&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
@@ -1415,12 +1750,28 @@ table {
 
     
   
+    <div class="desc"><p>Converts hexadecimal value to integer</p>
+<p>Parameters:
+value (int): Value input as hexadecimal</p>
+<p>Returns:
+str: Returns value as integer</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.hex2Int', this);">Show source &equiv;</a></p>
   <div id="source-natemath.hex2Int" class="source">
     <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">hex2Int</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts hexadecimal value to integer</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as hexadecimal</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as integer</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type hex&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type hex&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
@@ -1439,12 +1790,28 @@ table {
 
     
   
+    <div class="desc"><p>Converts hexadecimal value to octal</p>
+<p>Parameters:
+value (int): Value input as hexadecimal</p>
+<p>Returns:
+str: Returns value as octal</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.hex2Oct', this);">Show source &equiv;</a></p>
   <div id="source-natemath.hex2Oct" class="source">
     <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">hex2Oct</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts hexadecimal value to octal</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as hexadecimal</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as octal</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type hexadeciman&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type hexadeciman&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">oct</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
@@ -1463,12 +1830,28 @@ table {
 
     
   
+    <div class="desc"><p>Converts integer value to binary</p>
+<p>Parameters:
+value (int): Value input as binary</p>
+<p>Returns:
+str: Returns value as binary</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.int2Bin', this);">Show source &equiv;</a></p>
   <div id="source-natemath.int2Bin" class="source">
     <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">int2Bin</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts integer value to binary</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as binary</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as binary</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type integer&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type integer&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
@@ -1487,12 +1870,28 @@ table {
 
     
   
+    <div class="desc"><p>Converts integer value to hexadecimal</p>
+<p>Parameters:
+value (int): Value input as integer</p>
+<p>Returns:
+str: Returns value as hexadecimal</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.int2Hex', this);">Show source &equiv;</a></p>
   <div id="source-natemath.int2Hex" class="source">
     <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">int2Hex</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts integer value to hexadecimal</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as integer</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as hexadecimal</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type integer&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type integer&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">hex</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
@@ -1511,12 +1910,28 @@ table {
 
     
   
+    <div class="desc"><p>Converts integer value to octal</p>
+<p>Parameters:
+value (int): Value input as integer</p>
+<p>Returns:
+str: Returns value as octal</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.int2Oct', this);">Show source &equiv;</a></p>
   <div id="source-natemath.int2Oct" class="source">
     <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">int2Oct</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts integer value to octal</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as integer</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as octal</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type integer&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type integer&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">oct</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
@@ -1535,14 +1950,32 @@ table {
 
     
   
+    <div class="desc"><p>Multiplies two values </p>
+<p>Parameters:
+value1 (int/float): Value 1 input
+value2 (int/float): Value 2 input</p>
+<p>Returns:
+int/float:Returning value as int or float depending on input</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.multiValue', this);">Show source &equiv;</a></p>
   <div id="source-natemath.multiValue" class="source">
     <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">multiValue</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Multiplies two values </span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value1 (int/float): Value 1 input</span>
+<span class="sd">    value2 (int/float): Value 2 input</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    int/float:Returning value as int or float depending on input</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value1 should must be of type integer or float&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value1 must be of type integer or float&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 should must be of type integer or float.&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 must be of type integer or float.&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">*</span> <span class="n">value2</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
@@ -1561,12 +1994,28 @@ table {
 
     
   
+    <div class="desc"><p>Converts octal value to binary</p>
+<p>Parameters:
+value (int): Value input as octal</p>
+<p>Returns:
+str: Returns value as binary</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.oct2Bin', this);">Show source &equiv;</a></p>
   <div id="source-natemath.oct2Bin" class="source">
     <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">oct2Bin</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts octal value to binary</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as octal</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as binary</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type octal&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type octal&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
@@ -1585,12 +2034,28 @@ table {
 
     
   
+    <div class="desc"><p>Converts octal value to hexadecimal</p>
+<p>Parameters:
+value (int): Value input as octal</p>
+<p>Returns:
+str: Returns value as hexidecimal</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.oct2Hex', this);">Show source &equiv;</a></p>
   <div id="source-natemath.oct2Hex" class="source">
     <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">oct2Hex</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts octal value to hexadecimal</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as octal</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as hexidecimal</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type octal&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type octal&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">hex</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
@@ -1609,12 +2074,28 @@ table {
 
     
   
+    <div class="desc"><p>Converts octal value to integer</p>
+<p>Parameters:
+value (int): Value input as octal</p>
+<p>Returns:
+str: Returns value as integer</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.oct2Int', this);">Show source &equiv;</a></p>
   <div id="source-natemath.oct2Int" class="source">
     <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">oct2Int</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Converts octal value to integer</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int): Value input as octal</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Returns value as integer</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type octal&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type octal&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
@@ -1633,15 +2114,29 @@ table {
 
     
   
-    <div class="desc"><p>Returns the square root of a value.</p></div>
+    <div class="desc"><p>Finds square root of value</p>
+<p>Parameters:
+value (int/float): Value input</p>
+<p>Returns:
+int/float:Returning value as int or float depending on input.</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.sqrtValue', this);">Show source &equiv;</a></p>
   <div id="source-natemath.sqrtValue" class="source">
     <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">sqrtValue</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns the square root of a value.&quot;&quot;&quot;</span>
+
+    <span class="sd">&quot;&quot;&quot;Finds square root of value</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (int/float): Value input</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    int/float:Returning value as int or float depending on input.</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value should must be of type integer or float&#39;</span><span class="p">)</span>
-    <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type integer or float&#39;</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
 
@@ -1659,14 +2154,32 @@ table {
 
     
   
+    <div class="desc"><p>Substracts two values </p>
+<p>Parameters:
+value1 (int/float): Value 1 input
+value2 (int/float): Value 2 input</p>
+<p>Returns:
+int/float:Returning value as int or float depending on input</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.subValue', this);">Show source &equiv;</a></p>
   <div id="source-natemath.subValue" class="source">
     <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">subValue</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Substracts two values </span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value1 (int/float): Value 1 input</span>
+<span class="sd">    value2 (int/float): Value 2 input</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    int/float:Returning value as int or float depending on input</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value1 should must be of type integer or float&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value1 must be of type integer or float&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 should must be of type integer or float.&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 must be of type integer or float.&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">-</span> <span class="n">value2</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
