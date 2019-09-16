@@ -17,10 +17,10 @@ do the following functions.
 
 ### Math base translations
 * Transform between various basis, including:
-** Integer
-** Binary
-** Octal
-** Hexadecimal
+  * Integer
+  * Binary
+  * Octal
+  * Hexadecimal
 
 ## API Documentation
 
