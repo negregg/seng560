@@ -38,7 +38,7 @@ Documentation.  The following shows output using iPython interface to execute
 functions from the natemath module.
 
 ```python
-[negregg@rcws0001 seng560]$ ipython
+$ ipython
 Python 3.6.8 (default, Apr 25 2019, 21:02:35) 
 Type 'copyright', 'credits' or 'license' for more information
 IPython 7.8.0 -- An enhanced Interactive Python. Type '?' for help.
