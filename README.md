@@ -38,33 +38,13 @@ Documentation.
 
 ```python
 
-#!/usr/bin/python3
-
-from natemath import *
+In [1]: from natemath import *                                                                                                                       
 
 # Example of adding two values
-print(addValue(10,5))
+In [2]: print(addValue(10,5))                                                                                                                        
+15
 
-# Example of muliplying two values
-print(multiValue(10,5))
 
-# Example of square a root value
-print(sqrtValue(9))
-
-# Example of finding exponent value
-print(expValue(3,2))
-
-# Example of translating integer to binary
-print(int2Bin(10))
-
-# Example of translating binary to octal
-print(bin2Oct(0b1010))
-
-# Example of translating octal to hexadecimal
-print(oct2Hex(0o12))
-
-# Example of translating hexadecimal to integer
-print(hex2Int(0xa))
 
 ```
 
@@ -80,6 +60,6 @@ type.
 
 * Every function has an associated "unit test" that ensure the accuracy of 
 the function.  Users may want to execute the unit test code on their own.  If so,
-simply execute `mathtest.py`.  `mathtest.py` is also easily extendable if users
+simply execute `mathtest.py`.  The unit tests are also easily extendable if users
 want to add any additional test cases.
 
