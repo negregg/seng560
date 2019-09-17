@@ -34,16 +34,49 @@ https://negregg.github.io/seng560/
 
 The following are several examples utilizing the natemath module.  Using the 
 examples should show how to easily use the functions available in the API
-Documentation.
+Documentation.  The following shows output using iPython interface to execute
+functions from the natemath module.
 
 ```python
+[negregg@rcws0001 seng560]$ ipython
+Python 3.6.8 (default, Apr 25 2019, 21:02:35) 
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.8.0 -- An enhanced Interactive Python. Type '?' for help.
 
-In [1]: from natemath import *                                                                                                                       
+In [1]: from natemath import * 
+   ...:                                                                                                                                              
 
-# Example of adding two values
-In [2]: print(addValue(10,5))                                                                                                                        
+In [2]: # Example of adding two values 
+   ...: print(addValue(10,5))                                                                                                                        
 15
 
+In [3]: # Example of muliplying two values 
+   ...: print(multiValue(10,5))                                                                                                                      
+50
+
+In [4]: # Example of square a root value 
+   ...: print(sqrtValue(9))                                                                                                                          
+3.0
+
+In [5]: # Example of finding exponent value 
+   ...: print(expValue(3,2))                                                                                                                         
+9
+
+In [6]: # Example of translating integer to binary 
+   ...: print(int2Bin(10))                                                                                                                           
+0b1010
+
+In [7]: # Example of translating binary to octal 
+   ...: print(bin2Oct(0b1010)) 
+0o12
+
+In [8]: # Example of translating octal to hexadecimal 
+   ...: print(oct2Hex(0o12)) 
+0xa
+
+In [9]: # Example of translating hexadecimal to integer 
+   ...: print(hex2Int(0xa))                                                                                                                          
+10
 
 
 ```
