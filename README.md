@@ -30,12 +30,21 @@ documentation:
 
 https://negregg.github.io/seng560/
 
+## Usage
+
+After loading the natemath module, you can simply use any of the functions listed in
+the [API Documentation](https://pdoc3.github.io/pdoc/).  All functions take either
+one or two input values depending on the operation being performed.  
+
+
+
+
 ## Examples
 
 The following are several examples utilizing the natemath module.  Using the 
 examples should show how to easily use the functions available in the API
-Documentation.  The following shows output using iPython interface to execute
-functions from the natemath module.
+Documentation.  The following shows output using [iPython](https://ipython.org) 
+interface to execute functions from the natemath module.
 
 ```python
 $ ipython
@@ -90,6 +99,9 @@ functions return either a "integer" or "float" depending on input.  If at least
 one of the input variable is a float, the result will be returned as a float. 
 All base tranlation functions (i.e. int2Bin) values are returned as a "string"
 type.
+
+* Ensures proper data type on input values.  If an invalid data type is entered,
+(i.e. boolean), the function will raise an error.
 
 * Every function has an associated "unit test" that ensure the accuracy of 
 the function.  Users may want to execute the unit test code on their own.  If so,
