@@ -1112,7 +1112,7 @@ base translations (i.e. binary to octal).</p>
 <span class="sd">    value2 (int/float): Value 2 input</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">    int/float:Returning value as int or float depending on input</span>
+<span class="sd">    float: result</span>
 
 <span class="sd">   &quot;&quot;&quot;</span>
 
@@ -1121,7 +1121,7 @@ base translations (i.e. binary to octal).</p>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 must be of type integer or float.&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">+</span> <span class="n">value2</span>
-    <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 
 <span class="c1"># Substracts two values and returns a result</span>
 <span class="k">def</span> <span class="nf">subValue</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">):</span>
@@ -1133,7 +1133,7 @@ base translations (i.e. binary to octal).</p>
 <span class="sd">    value2 (int/float): Value 2 input</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">    int/float:Returning value as int or float depending on input</span>
+<span class="sd">    float: result</span>
 
 <span class="sd">   &quot;&quot;&quot;</span>
 
@@ -1142,7 +1142,7 @@ base translations (i.e. binary to octal).</p>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 must be of type integer or float.&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">-</span> <span class="n">value2</span>
-    <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 
 <span class="c1"># Multiplies two values and returns a result</span>
 <span class="k">def</span> <span class="nf">multiValue</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">):</span>
@@ -1154,7 +1154,7 @@ base translations (i.e. binary to octal).</p>
 <span class="sd">    value2 (int/float): Value 2 input</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">    int/float:Returning value as int or float depending on input</span>
+<span class="sd">    float: result</span>
 
 <span class="sd">   &quot;&quot;&quot;</span>
 
@@ -1163,7 +1163,7 @@ base translations (i.e. binary to octal).</p>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 must be of type integer or float.&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">*</span> <span class="n">value2</span>
-    <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 
 <span class="c1"># Divides value 1 by value 2 and returns the result</span>
 <span class="k">def</span> <span class="nf">divValue</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">):</span>
@@ -1175,7 +1175,7 @@ base translations (i.e. binary to octal).</p>
 <span class="sd">    value2 (int/float): Value 2 input</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">    int/float:Returning value as int or float depending on input</span>
+<span class="sd">    float: result</span>
 
 <span class="sd">   &quot;&quot;&quot;</span>
 
@@ -1184,7 +1184,7 @@ base translations (i.e. binary to octal).</p>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 must be of type integer or float.&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">/</span> <span class="n">value2</span>
-    <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 
 <span class="c1"># Finds square root of a value</span>
 <span class="k">def</span> <span class="nf">sqrtValue</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
@@ -1195,14 +1195,14 @@ base translations (i.e. binary to octal).</p>
 <span class="sd">    value (int/float): Value input</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">    int/float:Returning value as int or float depending on input.</span>
+<span class="sd">    float: result</span>
 
 <span class="sd">   &quot;&quot;&quot;</span>
 
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type integer or float&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
-    <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 
 <span class="c1"># Find exponent value ( i.e. value1^(value2))</span>
 <span class="k">def</span> <span class="nf">expValue</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">):</span>
@@ -1214,7 +1214,7 @@ base translations (i.e. binary to octal).</p>
 <span class="sd">    value2 (int/float): Value 2 input</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">    int/float:Returning value as int or float depending on input</span>
+<span class="sd">    float: result</span>
 
 <span class="sd">   &quot;&quot;&quot;</span>
 
@@ -1223,7 +1223,7 @@ base translations (i.e. binary to octal).</p>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 must be of type integer or float.&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">**</span> <span class="n">value2</span>
-    <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 
 <span class="c1"># Returns octal value as int</span>
 <span class="k">def</span> <span class="nf">oct2Int</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
@@ -1463,7 +1463,7 @@ base translations (i.e. binary to octal).</p>
 value1 (int/float): Value 1 input
 value2 (int/float): Value 2 input</p>
 <p>Returns:
-int/float:Returning value as int or float depending on input</p></div>
+float: result</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.addValue', this);">Show source &equiv;</a></p>
   <div id="source-natemath.addValue" class="source">
@@ -1476,7 +1476,7 @@ int/float:Returning value as int or float depending on input</p></div>
 <span class="sd">    value2 (int/float): Value 2 input</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">    int/float:Returning value as int or float depending on input</span>
+<span class="sd">    float: result</span>
 
 <span class="sd">   &quot;&quot;&quot;</span>
 
@@ -1485,7 +1485,7 @@ int/float:Returning value as int or float depending on input</p></div>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 must be of type integer or float.&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">+</span> <span class="n">value2</span>
-    <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 
   </div>
@@ -1627,7 +1627,7 @@ str: Returns value as octal</p></div>
 value1 (int/float): Value 1 input
 value2 (int/float): Value 2 input</p>
 <p>Returns:
-int/float:Returning value as int or float depending on input</p></div>
+float: result</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.divValue', this);">Show source &equiv;</a></p>
   <div id="source-natemath.divValue" class="source">
@@ -1640,7 +1640,7 @@ int/float:Returning value as int or float depending on input</p></div>
 <span class="sd">    value2 (int/float): Value 2 input</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">    int/float:Returning value as int or float depending on input</span>
+<span class="sd">    float: result</span>
 
 <span class="sd">   &quot;&quot;&quot;</span>
 
@@ -1649,7 +1649,7 @@ int/float:Returning value as int or float depending on input</p></div>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 must be of type integer or float.&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">/</span> <span class="n">value2</span>
-    <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 
   </div>
@@ -1671,7 +1671,7 @@ int/float:Returning value as int or float depending on input</p></div>
 value1 (int/float): Value 1 input
 value2 (int/float): Value 2 input</p>
 <p>Returns:
-int/float:Returning value as int or float depending on input</p></div>
+float: result</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.expValue', this);">Show source &equiv;</a></p>
   <div id="source-natemath.expValue" class="source">
@@ -1684,7 +1684,7 @@ int/float:Returning value as int or float depending on input</p></div>
 <span class="sd">    value2 (int/float): Value 2 input</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">    int/float:Returning value as int or float depending on input</span>
+<span class="sd">    float: result</span>
 
 <span class="sd">   &quot;&quot;&quot;</span>
 
@@ -1693,7 +1693,7 @@ int/float:Returning value as int or float depending on input</p></div>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 must be of type integer or float.&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">**</span> <span class="n">value2</span>
-    <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 
   </div>
@@ -1955,7 +1955,7 @@ str: Returns value as octal</p></div>
 value1 (int/float): Value 1 input
 value2 (int/float): Value 2 input</p>
 <p>Returns:
-int/float:Returning value as int or float depending on input</p></div>
+float: result</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.multiValue', this);">Show source &equiv;</a></p>
   <div id="source-natemath.multiValue" class="source">
@@ -1968,7 +1968,7 @@ int/float:Returning value as int or float depending on input</p></div>
 <span class="sd">    value2 (int/float): Value 2 input</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">    int/float:Returning value as int or float depending on input</span>
+<span class="sd">    float: result</span>
 
 <span class="sd">   &quot;&quot;&quot;</span>
 
@@ -1977,7 +1977,7 @@ int/float:Returning value as int or float depending on input</p></div>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 must be of type integer or float.&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">*</span> <span class="n">value2</span>
-    <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 
   </div>
@@ -2118,7 +2118,7 @@ str: Returns value as integer</p></div>
 <p>Parameters:
 value (int/float): Value input</p>
 <p>Returns:
-int/float:Returning value as int or float depending on input.</p></div>
+float: result</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.sqrtValue', this);">Show source &equiv;</a></p>
   <div id="source-natemath.sqrtValue" class="source">
@@ -2130,14 +2130,14 @@ int/float:Returning value as int or float depending on input.</p></div>
 <span class="sd">    value (int/float): Value input</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">    int/float:Returning value as int or float depending on input.</span>
+<span class="sd">    float: result</span>
 
 <span class="sd">   &quot;&quot;&quot;</span>
 
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value must be of type integer or float&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
-    <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 
   </div>
@@ -2159,7 +2159,7 @@ int/float:Returning value as int or float depending on input.</p></div>
 value1 (int/float): Value 1 input
 value2 (int/float): Value 2 input</p>
 <p>Returns:
-int/float:Returning value as int or float depending on input</p></div>
+float: result</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-natemath.subValue', this);">Show source &equiv;</a></p>
   <div id="source-natemath.subValue" class="source">
@@ -2172,7 +2172,7 @@ int/float:Returning value as int or float depending on input</p></div>
 <span class="sd">    value2 (int/float): Value 2 input</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">    int/float:Returning value as int or float depending on input</span>
+<span class="sd">    float: result</span>
 
 <span class="sd">   &quot;&quot;&quot;</span>
 
@@ -2181,7 +2181,7 @@ int/float:Returning value as int or float depending on input</p></div>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;value2 must be of type integer or float.&#39;</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">-</span> <span class="n">value2</span>
-    <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 
   </div>

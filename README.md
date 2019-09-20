@@ -36,9 +36,6 @@ After loading the natemath module, you can simply use any of the functions liste
 the [API Documentation](https://pdoc3.github.io/pdoc/).  All functions take either
 one or two input values depending on the operation being performed.  
 
-
-
-
 ## Examples
 
 The following are several examples utilizing the natemath module.  Using the 
@@ -57,11 +54,11 @@ In [1]: from natemath import *
 
 In [2]: # Example of adding two values 
    ...: print(addValue(10,5))                                                                                                                        
-15
+15.0
 
 In [3]: # Example of muliplying two values 
    ...: print(multiValue(10,5))                                                                                                                      
-50
+50.0
 
 In [4]: # Example of square a root value 
    ...: print(sqrtValue(9))                                                                                                                          
@@ -94,10 +91,11 @@ In [9]: # Example of translating hexadecimal to integer
 This module has been tested to ensure reusablility for other programs.  This 
 was accomplished using the following methods:
 
-* Ensuring a stanrdized return type from all functions.  All operations
-functions return either a "integer" or "float" depending on input.  If at least
+* Ensuring a standardized return type from all functions.  All operations
+functions return "float" even if all inputs are integers.  This is done to 
+ensure consistency of output and to lessen confusion of usage.  If at least
 one of the input variable is a float, the result will be returned as a float. 
-All base tranlation functions (i.e. int2Bin) values are returned as a "string"
+All base translation functions (i.e. int2Bin) values are returned as a "string"
 type.
 
 * Ensures proper data type on input values.  If an invalid data type is entered,
@@ -105,6 +103,6 @@ type.
 
 * Every function has an associated "unit test" that ensure the accuracy of 
 the function.  Users may want to execute the unit test code on their own.  If so,
-simply execute `mathtest.py`.  The unit tests are also easily extendable if users
+simply execute `mathtest.py`.  The unit tests are also easily extendible if users
 want to add any additional test cases.
 
