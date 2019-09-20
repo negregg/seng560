@@ -24,7 +24,7 @@ def addValue(value1, value2):
     value2 (int/float): Value 2 input
 
     Returns:
-    int/float:Returning value as int or float depending on input
+    float: result
 
    """
 
@@ -33,7 +33,7 @@ def addValue(value1, value2):
     if isinstance(value2, (str, complex, bool)):
         raise Exception('value2 must be of type integer or float.')
     result = value1 + value2
-    return result
+    return float(result)
 
 # Substracts two values and returns a result
 def subValue(value1, value2):
@@ -45,7 +45,7 @@ def subValue(value1, value2):
     value2 (int/float): Value 2 input
 
     Returns:
-    int/float:Returning value as int or float depending on input
+    float: result
 
    """
 
@@ -54,7 +54,7 @@ def subValue(value1, value2):
     if isinstance(value2, (str, complex, bool)):
         raise Exception('value2 must be of type integer or float.')
     result = value1 - value2
-    return result
+    return float(result)
 
 # Multiplies two values and returns a result
 def multiValue(value1, value2):
@@ -66,7 +66,7 @@ def multiValue(value1, value2):
     value2 (int/float): Value 2 input
 
     Returns:
-    int/float:Returning value as int or float depending on input
+    float: result
 
    """
 
@@ -75,7 +75,7 @@ def multiValue(value1, value2):
     if isinstance(value2, (str, complex, bool)):
         raise Exception('value2 must be of type integer or float.')
     result = value1 * value2
-    return result
+    return float(result)
 
 # Divides value 1 by value 2 and returns the result
 def divValue(value1, value2):
@@ -87,7 +87,7 @@ def divValue(value1, value2):
     value2 (int/float): Value 2 input
 
     Returns:
-    int/float:Returning value as int or float depending on input
+    float: result
 
    """
 
@@ -96,7 +96,7 @@ def divValue(value1, value2):
     if isinstance(value2, (str, complex, bool)):
         raise Exception('value2 must be of type integer or float.')
     result = value1 / value2
-    return result
+    return float(result)
 
 # Finds square root of a value
 def sqrtValue(value):
@@ -107,14 +107,14 @@ def sqrtValue(value):
     value (int/float): Value input
 
     Returns:
-    int/float:Returning value as int or float depending on input.
+    float: result
 
    """
 
     if isinstance(value, (str, complex, bool)):
         raise Exception('value must be of type integer or float')
     result = math.sqrt(value);
-    return result
+    return float(result)
 
 # Find exponent value ( i.e. value1^(value2))
 def expValue(value1, value2):
@@ -126,7 +126,7 @@ def expValue(value1, value2):
     value2 (int/float): Value 2 input
 
     Returns:
-    int/float:Returning value as int or float depending on input
+    float: result
 
    """
 
@@ -135,7 +135,7 @@ def expValue(value1, value2):
     if isinstance(value2, (str, complex, bool)):
         raise Exception('value2 must be of type integer or float.')
     result = value1 ** value2
-    return result
+    return float(result)
 
 # Returns octal value as int
 def oct2Int(value):
