@@ -86,8 +86,18 @@ In [9]: # Example of translating hexadecimal to integer
 
 
 ```
+## Unit Testing
+
+The natemath module has been thoroughly tested using Python's 
+[unittest](https://docs.python.org/3/library/unittest.html) module.  Unit tests
+are performed on each function in the module to ensure they return the expected
+value.  Utilizing this method allows for quick testing of any changes to code
+to ensure functionality is stable.  Users can verify unittest by executing 
+`unittest.py`.
+
 
 ## Module Reuseability
+
 This module has been tested to ensure reusablility for other programs.  This 
 was accomplished using the following methods:
 
